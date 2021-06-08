@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  --bgColorMain: hsl(233, 47%, 7%);
+  --bgColorCard: hsl(244, 38%, 16%);
+  --accentCard: hsl(277, 64%, 61%);
+  --colorTitle: hsl(0, 0%, 100%);
+  --colorParagrah: hsla(0, 0%, 100%, 0.75);
+  --colorFooter: hsla(0, 0%, 100%, 0.6);
+  --familyTitle: "Lexend Deca", sans-serif;
+  --familyFooter: "Lexend Deca", sans-serif;
+  --familyParagraph: "Inter", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 8px;
+    /* background-image: linear-gradient( rgba(255, 255, 255, 0.808),rgba(128, 128, 128, 0.37)); */
+    border-radius: 50px;
+    border: 1px solid hsla(0, 0%, 40%, 0.603);
+}
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(hsl(233, 47%, 7%),white);
+    border-radius: 50px;
+}
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--bgColorMain);
+}
+.layout {
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  /* background-color: var(--bgColorMain); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgColorCard);
+  border-radius: 10px;
+  overflow-x: hidden;
+  max-width: 80%;
+  min-width: 700px;
+  height: auto;
+  margin: 50px 0px !important;
+}
+.card .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-width: 600px;
+}
+.card .content:first-child .information {
+  padding: 50px 70px;
+  text-align: justify;
+}
+.card .content:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--accentCard);
+  opacity: 0.7;
+}
+.card .content img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+.card .content:first-child .information .title {
+  color: var(--colorTitle);
+  font-size: 40px;
+  text-align: left;
+}
+.card .content:first-child .information .title .title-resalt {
+  color: var(--accentCard);
+}
+.card .content:first-child .information p {
+  margin: 5vh 0px 8vh 0px;
+  font-size: 18px;
+  color: var(--colorParagrah);
+}
+.card .content:first-child .information .more-information {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.information .more-information .item-information {
+  color: var(--colorTitle);
+}
+.information .more-information .item-information h3 {
+  margin: 0px 5px;
+  font-size: 3vh;
+}
+@media screen and (max-width: 760px) {
+  .layout .card {
+    flex-wrap: wrap-reverse;
+    width: 100% !important;
+    min-width: 10% !important;
+  }
+  .card .content img {
+    min-height: 260px;
+    transition: 500ms ease-in-out !important;
+  }
+  .card .content:first-child .information .title {
+    font-size: 30px;
+    text-align: center;
+  }
+  .card .content:first-child .information p {
+    text-align: center;
+  }
+  .information .more-information {
+    display: block !important;
+    text-align: center;
+    width: 100%;
+  }
+  .information .more-information .item-information {
+    margin: 20px;
+  }
+  .information .more-information .item-information h3 {
+    font-size: 20px;
+  }
+}
