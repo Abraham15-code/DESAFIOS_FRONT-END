@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  --bgOrange: hsl(31, 77%, 52%);
+  --bgGreen: hsl(184, 100%, 22%);
+  --bgGreenDark: hsl(179, 100%, 13%);
+  --bgMain: hsl(0, 0%, 95%);
+}
+/*------------clase sola--------------*/
+.btn-information {
+  border: 2px solid white;
+  border-radius: 80px;
+  padding: 10px 20px;
+  background-color: var(--bgMain);
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--bgOrange);
+  text-transform: capitalize;
+}
+/*----------------------------*/
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--bgMain); */
+}
+.layout {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+  background-color: var(--bgMain);
+}
+.layout .content {
+  background-color: red;
+  border-radius: 10px;
+  width: auto;
+  max-width: 70%;
+  min-width: 750px;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+.content .card {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  min-width: 250px;
+  padding: 50px;
+  background-color: white;
+  color: white;
+}
+.content .card:first-child {
+  background-color: var(--bgOrange);
+}
+.content .card:nth-child(2) {
+  background-color: var(--bgGreen);
+}
+.content .card:nth-child(3) {
+  background-color: var(--bgGreenDark);
+}
+.content .card:first-child .btn-information {
+  color: var(--bgOrange);
+}
+.content .card:nth-child(2) .btn-information {
+  color: var(--bgGreen);
+}
+.content .card:nth-child(3) .btn-information {
+  color: var(--bgGreenDark);
+}
+.card .title-card {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+.card img,
+.card h2,
+.card p {
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.card p {
+  height: 40%;
+  font-size: 16px;
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 40px;
+}
+@media screen and (max-width:800px) {
+    .layout .content{
+        width: 100%;
+        height: auto !important;
+        min-width: 0px !important;
+        display: block !important;
+        min-width: 300px !important;
+    }
+    .content .card{
+        min-width: 100% !important;
+    }
+}
