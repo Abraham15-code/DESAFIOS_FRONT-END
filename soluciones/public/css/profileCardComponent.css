@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  font-family: "Kumbh Sans", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  --bgMain: hsl(185, 75%, 39%);
+  --colorDark: hsl(229, 23%, 23%);
+  --colorGray: hsl(227, 10%, 46%);
+}
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--bgMain); */
+}
+.layout {
+  /* max-width: 1440px; */
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bgMain);
+}
+.layout .bg-img {
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+}
+.layout .bg-img:first-child {
+  top: -50%;
+  left: -5% !important;
+}
+.layout .bg-img:nth-child(2) {
+  bottom: -50%;
+  right: -10% !important;
+}
+.layout .card {
+  display: block;
+  height: 480px;
+  width: 480px;
+  min-width: 350px;
+  overflow-x: hidden;
+  border-radius: 15px;
+  z-index: 1;
+  background: red;
+}
+.card .part-card {
+  background-color: white;
+  position: relative;
+}
+.card .part-card:first-child {
+  height: 35%;
+}
+.card .part-card:first-child img {
+  width: 100%;
+  height: 100%;
+}
+.card .part-card:last-child {
+  position: relative;
+  height: 65%;
+  text-align: center;
+}
+.card .part-card:last-child img {
+  width: 140px;
+  position: absolute;
+  top: -60px;
+  left: calc(50% - 70px);
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.card .part-card:last-child .profile {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.card .part-card:last-child .profile .info-profile {
+  margin-top: 15%;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: var(--colorGray);
+}
+.card .part-card:last-child .profile .info-profile strong {
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  margin: 10px;
+  color: var(--colorDark);
+}
+.card .part-card:last-child .profile .info-profile strong label {
+  font-weight: normal;
+  margin-left: 10px;
+  color: var(--colorGray);
+}
+.card .part-card:last-child .information {
+  border-top: 1px solid rgba(128, 128, 128, 0.308);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 35%;
+  color: var(--colorGray);
+  font-size: 15px;
+}
+.card .part-card:last-child .information .item-information h3{
+  color: var(--colorDark);
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+@media screen and (max-width:500px) {
+  .layout .card{
+    height: 400px !important;
+    min-width: 320px !important;
+  }
+  .card .part-card:last-child img {
+    transform: scale(0.8);
+  }
+  .card .part-card:last-child .information .item-information h3{
+    font-size: 20px;
+  }
+}
