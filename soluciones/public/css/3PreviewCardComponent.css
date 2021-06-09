@@ -18,6 +18,11 @@
   font-family: "Lexend Deca", sans-serif;
   color: var(--bgOrange);
   text-transform: capitalize;
+  transition: 250ms ease-in-out;
+}
+.btn-information:hover{
+  background-color: transparent;
+  color: white !important;
 }
 /*----------------------------*/
 body {
