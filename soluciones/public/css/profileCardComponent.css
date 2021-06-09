@@ -120,7 +120,7 @@ body {
 @media screen and (max-width:500px) {
   .layout .card{
     height: 400px !important;
-    min-width: 320px !important;
+    min-width: 330px !important
   }
   .card .part-card:last-child img {
     transform: scale(0.8);
