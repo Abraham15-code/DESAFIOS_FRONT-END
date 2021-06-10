@@ -73,7 +73,7 @@ body {
   line-height: 60px;
 }
 .content .card:first-child .item-card:first-child p {
-  padding-right: 100px;
+  padding-right: 98px;
   font-size: 17px;
   color: var(--colorGrayDarkMagenta);
 }
