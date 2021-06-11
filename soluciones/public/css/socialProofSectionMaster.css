@@ -18,7 +18,7 @@ body {
   align-items: center;
 }
 .layout {
-  /* max-width: 1440px; */
+  max-width: 1440px;
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -42,10 +42,10 @@ body {
   right: 0px;
 }
 .layout .content {
-  /* background-color: red; */
+  background-color: red;
   width: 100%;
   max-width: 90%;
-  min-width: 320px;
+  min-width: 400px;
   height: auto;
   display: block;
   position: relative;
@@ -225,11 +225,11 @@ body {
   }
 }
 @media screen and (max-width: 530px) {
-    *{
-        transition: 500ms ease-in-out;
-    }
+  * {
+    transition: 500ms ease-in-out;
+  }
   .layout .img-bg {
-      width: 100%;
+    width: 100%;
   }
   .content .card:first-child {
     margin-right: 0px !important;
@@ -237,32 +237,29 @@ body {
     display: block !important;
     text-align: center;
   }
-  .content .card:first-child .item-card:first-child h2{
-      font-size: 30px !important;
-      line-height: 30px;
+  .content .card:first-child .item-card:first-child h2 {
+    font-size: 30px !important;
+    line-height: 30px;
   }
   .content .card:first-child .item-card:first-child p {
     padding-right: 0px;
     font-size: 15px;
     color: var(--colorGrayDarkMagenta);
   }
-  .content .card:first-child .item-card:nth-child(2) ul li label{
-      font-size: 15px;
+  .content .card:first-child .item-card:nth-child(2) ul li label {
+    font-size: 15px;
   }
-  .content .card:nth-child(2) .card-comentary{
-      padding: 30px;
+  .content .card:nth-child(2) .card-comentary {
+    padding: 30px;
   }
-  .content .card:nth-child(2) .card-comentary .header{
-    margin: 10px 0px 10px 0px;
+  .content .card:nth-child(2) .card-comentary .header img {
+    width: 40px;
+    height: 40px;
   }
-  .content .card:nth-child(2) .card-comentary .header img{
-      width: 40px;
-      height: 40px;
+  .content .card:nth-child(2) .card-comentary .header .information strong {
+    font-size: 15px;
   }
-  .content .card:nth-child(2) .card-comentary .header .information strong{
-      font-size: 15px;
-  }
-  .content .card:nth-child(2) .card-comentary p{
-      font-size: 15px;
+  .content .card:nth-child(2) .card-comentary p {
+    font-size: 15px;
   }
 }
