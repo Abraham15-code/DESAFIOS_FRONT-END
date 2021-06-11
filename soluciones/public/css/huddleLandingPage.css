@@ -51,7 +51,7 @@ footer {
 .content .header,
 .content .main,
 .content .footer {
-  padding: 50px 100px;
+  padding: 0px 100px;
   display: flex;
   align-items: center;
 }
@@ -59,17 +59,18 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 30px;
   /* background-color: red; */
 }
 .content .header img {
-  width: 20vh;
+  width: 200px;
   min-width: 150px;
-  max-width: 400px;
+  /* max-width: 400px; */
 }
 .content .main {
   /* background-color: green; */
   min-height: 600px;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 350px);
   justify-content: space-around;
 }
 .content .main img {
@@ -151,6 +152,6 @@ footer {
     }
     .content .footer{
         justify-content: center;
-        padding-bottom: 100px;
+        padding: 60px 0px 100px 0px;
     }
 }
