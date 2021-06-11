@@ -124,7 +124,7 @@ body {
   background-color: var(--colorDarkMagenta);
   height: auto;
   width: 400px;
-  height: 250px;
+  min-height: 250px;
   /* min-height: 280px; */
   /* min-width: 315px; */
   padding: 30px;
