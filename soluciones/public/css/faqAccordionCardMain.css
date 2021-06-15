@@ -120,6 +120,9 @@ body {
   font-weight: lighter;
   color: var(--colorGrayBlueDark);
 }
+.item-card:nth-child(2) ul li:hover h4{
+  color: var(--colorRed);
+}
 .item-card:nth-child(2) ul li .question img {
   transition: 250ms ease-in-out;
 }
