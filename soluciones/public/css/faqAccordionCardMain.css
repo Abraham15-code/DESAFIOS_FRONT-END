@@ -29,7 +29,7 @@ body {
   align-items: center;
   overflow-x: hidden;
   position: relative;
-  background-color: var(--colorViolet);
+  background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
   padding: 100px 50px;
 }
 .layout .content {
