@@ -35,6 +35,7 @@ i {
 .btn-icon {
   font-size: 18px;
   transition: 150ms ease-in-out;
+  color: white;
 }
 .btn-icon:hover {
   transform: scale(1.2);
