@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  --colorRedOpacity: hsla(0, 100%, 74%, 0.582);
+  --colorRed: hsl(0, 100%, 74%);
+  --colorGreen: hsl(154, 59%, 51%);
+  --colorBlue: hsl(248, 32%, 49%);
+  --colorBlueDark: hsl(249, 10%, 26%);
+  --colorBlueGray: hsl(246, 25%, 77%);
+  font-family: "Poppins", sans-serif;
+}
+.layout,
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 70px 30px;
+  /* max-width: 1440px; */
+}
+.layout .bg-img {
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorRed);
+}
+.layout .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  height: auto;
+  max-width: 1440px;
+  z-index: 1;
+}
+.content .card {
+  height: 100%;
+  width: 100%;
+  min-width: 350px;
+  text-align: center;
+  padding: 30px;
+  display: block;
+  position: relative;
+}
+.card:nth-child(1) {
+  text-align: left;
+  width: auto;
+  max-width: 620px;
+  font-size: 16px;
+  color: white;
+}
+.card:nth-child(1) h2 {
+  font-size: 50px;
+  line-height: 50px;
+}
+.card:nth-child(1) p {
+  margin: 20px 0px 10px 0px;
+  padding-right: 30px;
+}
+.card:nth-child(2) {
+  width: 580px;
+  max-width: 700px;
+  min-width: 550px;
+  height: auto;
+  /* background-color: red; */
+}
+.card:nth-child(2) .warning {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  padding: 12px 10px;
+  background-color: var(--colorBlue);
+  box-shadow: 0px 8px 3px 0px rgba(0, 0, 0, 0.253);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card:nth-child(2) .warning b {
+  margin-right: 3px;
+}
+.card:nth-child(2) form {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 8px;
+  margin: 25px 0px 10px 0px;
+  padding: 20px 30px;
+  box-shadow: 0px 8px 3px 0px rgba(0, 0, 0, 0.233);
+}
+form .group-input {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0px;
+}
+form .group-input:last-of-type {
+  margin: 20px 0px 10px 0px !important;
+}
+form .group-input .error-message {
+  width: 100%;
+  display: none;
+  justify-content: flex-end;
+  text-align: right;
+  padding-top: 5px;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--colorRed);
+}
+form .group-input .btn-send {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: var(--colorGreen);
+  color: white;
+  border-style: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+}
+form .group-input .btn-send:active {
+  background-color: hsl(154, 69%, 36%);
+}
+form .content-input {
+  width: 100%;
+  position: relative;
+}
+form .content-input input {
+  width: 100%;
+  /* padding: 12px 50px 12px 12px; */
+  padding: 12px 20px;
+  outline: none;
+  border-style: none;
+  border: 1.5px solid var(--colorBlueGray);
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--colorBlueDark);
+}
+input:valid {
+  border: 1.5px solid var(--colorBlue) !important;
+  box-shadow: 0px 0px 0px 1px var(--colorBlue);
+}
+input::placeholder {
+  color: var(--colorBlueGray);
+}
+form .content-input .img-error {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  margin-top: 15px;
+  width: 18px;
+}
+form .message {
+  font-size: 12px;
+  color: var(--colorBlueGray);
+}
+form .message b {
+  color: var(--colorRed);
+}
+/*-----clases para agregar---------------*/
+.message-send{
+  color: hsl(154, 51%, 39%);
+  margin-top: 10px;
+  display: none;
+  font-weight: bold;
+}
+.error input {
+  border: 1.5px solid var(--colorRed) !important;
+  color: var(--colorRed) !important;
+  box-shadow: 0px 0px 0px 1px var(--colorRed) !important;
+  color: var(--colorRed) !important;
+  padding: 12px 50px 12px 12px !important;
+}
+.error input::placeholder {
+  color: var(--colorRedOpacity) !important;
+}
+.error .img-error {
+  display: flex !important;
+}
+.error .error-message {
+  display: flex !important;
+}
+@media screen and (max-width: 900px) {
+  .layout .content {
+    display: block;
+  }
+  .card:nth-child(1) {
+    width: auto;
+  }
+  .card:nth-child(2) {
+    width: auto;
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card:nth-child(1) {
+    text-align: center;
+  }
+  .card:nth-child(1) h2 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .card:nth-child(2) .warning {
+    display: block;
+  }
+}
