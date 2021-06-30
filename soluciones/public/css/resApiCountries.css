@@ -57,7 +57,7 @@ body {
   align-items: center;
   font-weight: 800;
 }
-.header .theme label {
+.header .theme span {
   cursor: pointer;
   pointer-events: none;
 }
