@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abraham Alberto Flores Zavala">
+    <meta name="description" content="Rest api of countries">
+    <title>Rest api Countries</title>
+    <link type="text/css" rel="stylesheet" href="../public/css/resApiCountries.css">
+    <link type="image/png" rel="icon" href="../public/images/resApiCountries/favicon-32x32.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body id="body">
+    <div class="layout">
+        <header class="header">
+            <h2>Where in the world?</h2>
+            <label for="ch" id="btn-mode" class="theme">
+                <input type="checkbox" id="ch">
+                <label>Dark Mode</label>
+            </label>
+        </header>
+        <main class="content">
+            <div class="filter">
+                <div class="group-input">
+                    <input type="text" name="search" id="search" placeholder="Search for a country ..." required>
+                    <i class="fas fa-search icon"></i>
+                </div>
+                <div class="group-input">
+                    <div class="content-cbo" id="cbo-filter">
+                        <div class="cbo-header">
+                            <input type="hidden" name="cbo-region" value="">
+                            <label> Filter by Region</label>
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <ol class="cbo-values" name="cbo-values">
+                            <!-- desde js -->
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="content-card content-card-active" id="content-card">
+                <!-- desde js -->
+            </div>
+            <!----detalle de la banderas---->
+             <div class="content-detail" id="content-detail">
+                <div class="filter">
+                    <button class="btn" id="btn-back">
+                        <i class="fas fa-arrow-left"></i>
+                        Back
+                    </button>
+                </div>
+                <div class="content-card-detail">
+                    <div class="content-img">
+                        <img src="https://extyseg.com/wp-content/uploads/2019/04/EXTYSEG-imagen-no-disponible.jpg"
+                            alt="flag" id="img-flag-details">
+                    </div>
+                    <div class="content-information">
+                        <div class="info">
+                            <div class="header-info">
+                                <h2 id="name-country-detail">-- -- --</h2>
+                            </div>
+                            <div class="content-info">
+                                <ul>
+                                    <li>
+                                        <b>native name : </b>
+                                        <label id="native-name">-- -- --</label>
+                                        
+                                    </li>
+                                    <li>
+                                        <b>population : </b>
+                                        <label id="population">-- -- --</label>
+                                    </li>
+                                    <li>
+                                        <b>region : </b>
+                                        <label id="region">-- -- --</label>
+                                    </li>
+                                    <li>
+                                        <b>Sub region : </b>
+                                        <label id="sub-region">-- -- --</label>
+                                    </li>
+                                    <li>
+                                        <b>capital : </b>
+                                        <label id="capital">-- -- --</label>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <b>Top level domain : </b>
+                                        <label id="top-level-domain">-- -- --</label>
+                                    </li>
+                                    <li>
+                                        <b>currencies : </b>
+                                        <label id="currencies">-- -- --</label>
+                                    </li>
+                                    <li>
+                                        <b>languages : </b>
+                                        <label id="languages">-- -- --</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-info">
+                                <h4>Border countries</h4>
+                                <ul class="ul-border-countries" id="border-countries">
+                                    <li>France</li>
+                                    <li>Germany</li>
+                                    <li>Netherlands</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </main>
+    </div>
+</body>
+<script src="../public/js/resApiCountries.js"></script>
+
+</html>
